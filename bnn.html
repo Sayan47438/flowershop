@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гүлдердің онлайн дүкені</title>
+    <style>
+        /* Сымды макет үшін стильдері */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+        .flower {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            float: left;
+            width: calc(33.33% - 20px);
+        }
+        .flower img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .flower h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .flower p {
+            text-align: center;
+            color: #666;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Тапсырыс беру формасының стилі */
+        .order-form {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .order-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .order-form input, .order-form textarea, .order-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .order-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .order-form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Гүлдердің онлайн дүкеніне қош келдіңіз!</h1>
+    </header>
+    <div class="container">
+        <div class="flower">
+            <img src="https://osken-onir.kz/uploads/posts/2018-08/1533969409_85c0ca.jpg" alt="Гүл">
+            <h3>Роза</h3>
+            <p>Роза гүл - махаббат символ.</p>
+            <p>Бағасы:15690Т</p>
+        </div>
+        <div class="flower">
+            <img src="https://tayynsha.loveflowers24.kz/wp-content/uploads/2022/04/tyulpany-belye.jpg" alt="Лалек">
+            <h3>Қызғалдақ</h3>
+            <p>Қызғалдақ гүлі - жаздың көзқарасы.</p>
+            <p>Бағасы:15000Т</p>
+        </div>
+        <div class="flower">
+            <img src="https://imperiacvetov.kz/image/cache/catalog/2016/01/mushkie%20buketi/9d31319b-c9ee-4825-8b44-f7c185d2de00-1000x1000.jpg" alt="Орхидея">
+            <h3>Кемпірқосақ гүлі</h3>
+            <p>Кемпірқосақ гүлі- әлемдегі ең әдемі гүл.</p>
+            <p>Бағасы:16800Т</p>
+        </div>
+     <div class="flower">
+                    <img src="https://imperiacvetov.kz/image/cache/catalog/mUMzgwYoNPM-1000x1000.jpg" alt="Орхидея">
+                    <h3>Гербера</h3>
+                    <p>Гербера гүлі- көпжылдық шөптесін өсімдіктер.</p>
+                    <p>Бағасы:13800Т</p> </div>
+
+        <div class="order-form">
+             <h2> Тапсырыс беру формасы </h2>
+            <form action="/submit_order" method="post">
+                <label for="full_name">Аты-жөні:</label>
+                <input type="text" id="full_name" name="full_name" required>
+                
+                <label for="phone_number">Телефон нөмірі:</label>
+                <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                
+                <label for="address">Мекен-жай:</label>
+                <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+                
+                <label for="flower_choice">Гүл таңдаңыз:</label>
+                <select id="flower_choice" name="flower_choice" required>
+                    <option value="">Таңдаңыз</option>
+                    <option value="Роза">Роза</option>
+                    <option value="Қызғалдақ">Қызғалдақ</option>
+                    <option value="Кемпірқосақ гүлі">Кемпірқосақ гүлі</option>
+                    <option value="Гербера гүлі">Гербера гүлі</option></option>
+                </select>
+                
+                <input type="submit" value="Тапсырысты жіберу">
+            </form>
+        </div>
+        <!-- Тапсырыс беру формасы аяқталды -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Гүлдердің онлайн мазмұны. Барлық құқықтар қорғалған.</p>
+    </footer>
+</body>
+</html>
